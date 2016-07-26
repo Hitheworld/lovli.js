@@ -26,6 +26,40 @@ $ cd lovli.js
 $ npm i
 ```
 
+该开源项目是web实时数据发布、存储一个较经典的实现，单从拓展思路的角度看
+也有很好的参考价值．
+
+开源项目: https://github.com/flipace/lovli.js
+
+** installation:
+
+# install database
+# ubuntu linux:
+source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt
+$DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
+
+# start database
+rethinkdb &
+
+# if using Mac OS X or other OS, please check
+# https://rethinkdb.com/docs/install/
+
+# install source
+git clone https://github.com/flipace/lovli.js
+cd  lovli.js
+npm install
+npm start
+
+# enter url http://localhost:3000 in browser to see todo list
+
+# database admin:
+http://localhost:8080/#dataexplorer
+enter:  r.db('horizon').table('todos')
+click "run" button to show data
+
 You'll need to have RethinkDB running.
 
 ### Run
